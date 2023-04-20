@@ -1,0 +1,27 @@
+1,Tạo lớp niit.bussiness.Product trong package niit.bussiness có các thành phần
+sau:
+	a. Có các trường:
+		i. ProductId: String
+		ii. ProductName: String
+		iii. importPrice: double
+		iv. exportPrice: double
+		v. tax: double – thuế
+		vi. profit: double
+	b. có 2 constructor
+	c. Có các phương thức getter/setter
+	d. Có phương thức inputData(): Cho phép nhập từ bàn phím tất cả các
+	thông tin niit.bussiness.Product trừ trường profit
+	e. Có phương thức displayData(): Cho phép hiển thị tất cả thông tin
+	niit.bussiness.Product
+	f. Có phương thức calProfit(): Cho phép tính lợi nhuận của niit.bussiness.Product
+	theo công thức:
+	Profit = exportPrice – importPrice – tax
+
+2. Tạo lớp ProductRun trong package niit.implement thực hiện hiển
+thị menu và thực hiện các chức năng theo menu sau:
+1. Nhập thông tin sản phẩm
+2. Tính lợi nhuận của sản phẩm
+3. Hiển thị thông tin sản phẩm
+4. Tìm kiểm sản phẩm theo tên sản phẩm (Tên cần tìm kiếm nhập từ bàn
+phím)
+5. Thoát
