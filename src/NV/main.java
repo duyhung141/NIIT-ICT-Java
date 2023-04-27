@@ -39,6 +39,7 @@ public class main {
                 case 4: {
                     qlnv.sapXepNVTheoTen();
                     System.out.println("Sắp xếp thành công");
+                    qlnv.hienThiThongTinNV();
                     break;
                 }
             }

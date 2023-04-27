@@ -59,7 +59,11 @@ public class NhanVien implements Comparable<NhanVien> {
     }
 
     @Override
-    public int compareTo(NhanVien other) {
-        return this.tenNV.compareTo(other.getTenNV());
+    public int compareTo(NhanVien nv2) {
+        String[] ten1 = this.getTenNV().split(" ");
+        String[] ten2 = nv2.getTenNV().split(" ");
+        String tenCuoi1 = ten1[ten1.length - 1];
+        String tenCuoi2 = ten2[ten2.length - 1];
+        return tenCuoi1.compareTo(tenCuoi2);
     }
 }
