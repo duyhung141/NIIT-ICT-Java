@@ -5,46 +5,46 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        byte chon = 0;
+        byte choice = 0;
         do {
             System.out.println("1. Nhập thông tin nhân viên");
             System.out.println("2. Hiển thị thông tin tất cả nhân viên");
-            System.out.println("3. Tìm kiếm nhân viên theo mã nv");
+            System.out.println("3. Tìm kiếm nhân viên theo mã employee");
             System.out.println("4. Sắp xếp nhân viên theo tên");
             System.out.println("5. Thoát");
-            chon = scanner.nextByte();
-            while (chon < 1 || chon > 5) {
+            choice = scanner.nextByte();
+            while (choice < 1 || choice > 5) {
                 System.out.println("Xin mời nhập lại");
-                chon = scanner.nextByte();
+                choice = scanner.nextByte();
             }
-            QLNV qlnv = new QLNV();
-            switch (chon) {
+            EmployeeManager employeeManager = new EmployeeManager();
+            switch (choice) {
                 case 1: {
-                    qlnv.nhapThongTinNV();
+                    employeeManager.input();
                     break;
                 }
                 case 2: {
-                    qlnv.hienThiThongTinNV();
+                    employeeManager.display();
                     break;
                 }
                 case 3: {
-                    System.out.println("Nhập MaNV cần tìm:");
+                    System.out.println("Nhập id cần tìm:");
                     scanner.nextLine();
-                    String maNV = scanner.nextLine();
-                    NhanVien nv = qlnv.timKiemNVtheoMaNV(maNV);
-                    if (nv == null) System.out.println("Không tồn tại Nhân Viên");
-                    else System.out.println(nv);
+                    String id = scanner.nextLine();
+                    Employee employee = employeeManager.searchById(id);
+                    if (employee == null) System.out.println("Không tồn tại Nhân Viên");
+                    else System.out.println(employee);
                     break;
                 }
                 case 4: {
-                    qlnv.sapXepNVTheoTen();
+                    employeeManager.sortByName();
                     System.out.println("Sắp xếp thành công");
-                    qlnv.hienThiThongTinNV();
+                    employeeManager.display();
                     break;
                 }
             }
             System.out.println("***************************************");
-        } while (chon != 5);
+        } while (choice != 5);
 
     }
 }
