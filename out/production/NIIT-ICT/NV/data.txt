@@ -1,0 +1,9 @@
+NV01, Trần Văn B, 30, 10000.0
+NV02, Trần Văn A, 30, 10000.0
+NV03, Trần Văn C, 30, 10000.0
+NV04, Nguyễn Thị A, 25, 8000.0
+NV05, Nguyễn Thị C, 25, 8000.0
+NV06, Nguyễn Thị B, 25, 8000.0
+NV07, Lê Minh A, 35, 12000.0
+NV08, Lê Minh B, 35, 12000.0
+NV09, Lê Minh C, 35, 12000.0
